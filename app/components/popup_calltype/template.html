@@ -1,0 +1,18 @@
+<div class="popup-shade" ng-if="popupShow">
+    <div class="popup-window">
+        <div class="button">
+            <div state-id="btn-popup-video" key-enter="$parent.$parent.dial(true)" key-left="to#'btn-popup-audio'" key-right="to#'btn-popup-audio'" key-down="to#'btn-popup-audio'" key-up="to#'btn-popup-audio'">
+                <button class="wrap">
+                        <a class="main-button" ng-class="{selected:stateman.isSelected(),anim:true}">视频通话</a>
+                    </button>
+            </div>
+        </div>
+        <div class="button">
+            <div state-id="btn-popup-audio" key-enter="$parent.$parent.dial(false)" key-left="to#'btn-popup-video'" key-right="to#'btn-popup-video'" key-up="to#'btn-popup-video'" key-down="to#'btn-popup-video'">
+                <button class="wrap">
+                        <a class="main-button" ng-class="{selected:stateman.isSelected(),anim:true}">语音通话</a>
+                    </button>
+            </div>
+        </div>
+    </div>
+</div>

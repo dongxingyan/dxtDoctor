@@ -1,0 +1,43 @@
+<nuts-page class="page-payment">
+    <popup-bind ctrl="vm.popupCtrl"></popup-bind>
+    <div class="payment-info">
+        <div>购买信息</div>
+        <div>
+            <div class="row">
+                <div class="row-title">项目</div>
+                <div class="row-text">{{vm.sp.appname}}</div>
+            </div>
+            <div class="row">
+                <div class="row-title">购买产品</div>
+                <div class="row-text">{{vm.sp.product}}</div>
+            </div>
+            <div class="row">
+                <div class="row-title">购买金额</div>
+                <div class="row-text">￥{{vm.sp.price}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="payment-method">
+        <div>支付方式</div>
+        <div>
+            <div class="logo-wrap" state-id="payment-alipay"
+                 key-right="to#'payment-wxpay'"
+                 key-enter="vm.alipay()"
+                 ng-class="{selected:stateman.isSelected(),anim:true,active:vm.isActive(tab)}">
+                <button class="wrap">
+                    <div class="logo-img img-alipay">
+                    </div>
+                </button>
+            </div>
+            <div class="logo-wrap" state-id="payment-wxpay"
+                 key-left="to#'payment-alipay'"
+                 key-enter="vm.wxpay()"
+                 ng-class="{selected:stateman.isSelected(),anim:true,active:vm.isActive(tab)}">
+                <button class="wrap">
+                    <div class="logo-img img-wechat">
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</nuts-page>

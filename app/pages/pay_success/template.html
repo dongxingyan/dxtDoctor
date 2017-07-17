@@ -1,0 +1,27 @@
+<nuts-page class="page-paysuccess">
+    <header>恭喜购买成功</header>
+    <div class="icon"><img src="../../res/imgs/success.png" alt=""></div>
+    <div class="message">客服人员会第一时间与您联系</div>
+    <div class="big-button">
+        <div state-id="payment-ok" 
+        key-enter="vm.onOkClicked()"
+        key-left="" 
+        key-right="stateman.to('payment-next')" 
+        key-up="stateman.to(stateman.cache('tabs'))" 
+        key-down="">
+            <button class="wrap">
+                <a class="main-button" ng-class="{selected:stateman.isSelected(),anim:true}">　确定　</a>
+            </button>
+        </div>
+        <div state-id="payment-next" 
+        key-enter="vm.onNextClicked()"
+        key-left="stateman.to('payment-ok')" 
+        key-right="" 
+        key-up="stateman.to(stateman.cache('tabs'))" 
+        key-down="">
+            <button class="wrap">
+                <a class="main-button" ng-class="{selected:stateman.isSelected(),anim:true}">继续购买</a>
+            </button>
+        </div>
+    </div>
+</nuts-page>

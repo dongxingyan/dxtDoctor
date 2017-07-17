@@ -1,0 +1,50 @@
+tw(value)
+    value/19.2vw
+
+th(value)
+    value/10.8vh
+
+.page-detail
+    overflow: hidden
+    padding  th(70) tw(113)
+    color: white
+    header
+        font-size: tw(60)
+    div.detail-content
+        display: flex
+        flex-direction: column
+        align-items: center
+        div.image{
+            width: tw(1405)
+            height: th(622)
+            margin-top th(35)
+            display: flex
+            justify-content: flex-start
+            transition: transform 1.2s
+            img{
+                border-radius: tw(5);
+                width: tw(1405)
+                height: th(622)
+                transform: scale(0.85)
+                flex-shrink 0
+                transition: transform 0.8s, box-shadow 0.8s
+            }
+            img.active{
+                // box-shadow: 0 0 tw(120) lightblue
+                transform: scale(1)
+                flex-shrink 0
+            }
+        }
+        div.buy{
+            margin-top th(40)
+            display: flex
+            div.message{
+                width: tw(700)
+                font-size: tw(36)
+            }
+            div.price{
+                width: tw(300)
+                font-size: tw(100)
+                margin-right: tw(50)
+            }
+        }

@@ -1,0 +1,98 @@
+tw(value)
+  value / 19.2vw
+
+th(value)
+  value / 10.8vh
+
+.page-payment {
+  display flex
+  flex-direction column
+  align-items center
+  .row {
+    display flex
+    flex-direction row
+    align-items flex-start
+    .row-title {
+      width tw(200)
+      font-size tw(36)
+    }
+    .row-text {
+      font-size tw(42)
+    // font-weight 600
+    }
+  }
+  div.payment-info {
+    padding-top th(100)
+    width tw(1364)
+    display flex
+    flex-direction row
+    justify-content flex-start
+    align-items center
+    color white
+    border-bottom: 1px solid silver
+    & > div:nth-child(1) {
+      display flex
+      flex-direction row
+      justify-content center
+      align-items center
+      font-size tw(50)
+      width tw(500)
+      height th(380)
+    }
+    & > div:nth-child(2) {
+      display flex
+      flex-direction column
+      justify-content space-between
+      height th(250)
+    }
+  }
+  div.payment-method {
+    width tw(1364)
+    display flex
+    flex-direction row
+    color white
+    align-items center
+    & > div:nth-child(1) {
+      display flex
+      flex-direction row
+      justify-content center
+      align-items center
+      font-size tw(50)
+      width tw(500)
+      height th(380)
+    }
+    & > div:nth-child(2) {
+      display flex
+      flex-direction row
+      width tw(800)
+      justify-content space-between
+      .logo-wrap {
+        display flex
+        justify-content center
+        align-items center
+        box-shadow 0 0 2px white
+        width th(340)
+        height th(340)
+        border-radius tw(30)
+        background-color #ffffff25
+        &.selected {
+          transform scale(1.03)
+          transform-origin:50% 50%;
+          border th(5) solid white
+        }
+        .logo-img {
+          width th(180)
+          height th(180)
+          background-size th(180) th(180)
+          background-repeat no-repeat
+        }
+        .img-wechat {
+          background-image url(../../res/imgs/wechat.png)
+        }
+        .img-alipay {
+          background-image url(../../res/imgs/alipay.png)
+        }
+      }
+    }
+  }
+}

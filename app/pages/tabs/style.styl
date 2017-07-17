@@ -1,0 +1,149 @@
+tw(value)
+  value / 19.2vw
+
+th(value)
+  value / 10.8vh
+
+.nuts-page
+  .navbar
+    padding-top th(40)
+    padding-left tw(70)
+    padding-right tw(70)
+    padding-bottom th(30)
+    overflow hidden
+    li
+      float left
+      display inline-block
+    & > ul
+      & > li
+        line-height tw(110)
+      & > li:nth-child(1)
+        padding-right tw(37)
+        border-right 1px solid #8d98ab
+        font-size tw(60)
+        color #8d98ab
+      & > li:nth-child(2)
+        padding-top tw(20)
+        line-height tw(80)
+        font-size tw(36)
+        ul > li
+          margin 0 tw(40)
+          color #8d98ab
+        ul > li.selected
+          border-bottom th(10) solid white
+        ul > li.active
+          font-size tw(42)
+          font-weight 500
+          color white
+      & > li:nth-child(3)
+        height th(110)
+        display flex
+        float right
+        flex-direction row
+        justify-content center
+        align-items center
+        span
+          font-size tw(32)
+          color white
+          padding-left tw(32)
+  .content
+    margin 0 tw(70)
+    overflow hidden
+    padding-bottom th(15)
+    .carousel
+      float left
+      width tw(1060)
+      height th(760)
+      margin-right tw(80)
+      img
+        width: tw(1060)
+        height: th(760)
+        border-radius tw(12)
+    .text
+      position relative
+      float left
+      height th(760)
+      width tw(640)
+      section
+        & > header
+          padding-bottom th(10)
+          font-size tw(42)
+          color white
+          border-bottom th(2) solid
+        & > ul
+          padding-top th(20)
+        & > ul > li
+          font-size tw(32)
+          color white
+      &>section:nth-child(1)
+        div
+          color: white
+          font-size: tw(35)
+          ul>li
+            margin-left tw(39)
+            list-style-type square
+            list-style-position: outside
+            padding-top th(10)
+            // &:before
+            //   content '　'
+            //   margin-right tw(10)
+            //   margin-top tw(10)
+            //   width tw(30)
+            //   height tw(30)
+            //   background-image url('../../res/imgs/star.png')
+            //   background-repeat no-repeat
+            //   background-position center
+            //   background-size tw(30) tw(30)
+            //   color white
+      .button
+        position absolute
+        bottom th(0)
+        display flex
+        width 100%
+        flex-direction row
+        justify-content center
+        align-items: center
+        &>section
+          width: 100%
+          padding-bottom: th(30)
+        .main-button
+          display block
+          font-size tw(42)
+          width tw(350)
+          height th(140)
+          line-height th(140)
+          background-color #fff
+          color #14a9c9
+          font-weight: 600
+          border-radius th(70)
+          border th(3) solid #4bd7ff
+          &.selected
+            box-shadow 0px 0px th(15) #4bd7ff;
+            transform: scale(1.1,1.1)
+            z-index: 10000;
+
+.big-button
+  bottom th(0)
+  display flex
+  width 100%
+  flex-direction row
+  justify-content center
+  .main-button
+    display block
+    font-size tw(42)
+    width tw(350)
+    height th(140)
+    line-height th(140)
+    background-color #fff
+    color #14a9c9
+    font-weight: 600
+    border-radius th(70)
+    border th(3) solid #4bd7ff
+    &.selected
+      box-shadow 0px 0px th(15) #4bd7ff;
+      transform: scale(1.1,1.1)
+      z-index: 10000;
+
+img.clock
+  width: tw(44)
+  height: tw(44)

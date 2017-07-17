@@ -1,0 +1,33 @@
+<div class="page-about">
+    <popup-dial ctrl='vm.popupCtrl'></popup-dial>
+    <aside>
+        <div class="about-logo">
+            <div class="logo-wrap">
+                <div class="logo-img">
+                    <img ng-src="{{vm.logoUrl}}" alt="logo">
+                </div>
+            </div>
+        </div>
+        <div class="about-title">{{vm.slogon}}</div>
+        <div class="about-btn">
+            <div class="big-button">
+                <div state-id="btn-about"
+                     key-left="to#btn-about"
+                     key-right="to#btn-about"
+                     key-up="stateman.to(stateman.cache('tabs'))" 
+                     key-enter="vm.call()"
+                     key-down="to#btn-about">
+                    <button class="wrap">
+                        <a class="main-button"
+                         ng-class="{selected:stateman.isSelected(),anim:true}">
+                         {{vm.btnTitle}}
+                         </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <article ng-bind-html="vm.desc">
+        {{vm.desc}}
+    </article>
+</div>

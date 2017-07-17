@@ -1,0 +1,12 @@
+node_modules
+dist
+build
+.vscode
+.idea
+*.DS_Store
+npm-debug.log
+debug.log
+npm_debug.log
+*.log
+index.html
+app/global.ts

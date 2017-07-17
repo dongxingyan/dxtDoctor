@@ -1,0 +1,64 @@
+<nuts-page>
+    <div class="page-detail">
+        <header>{{vm.name}}</header>
+        <div class="detail-content">
+            <div class="image" ng-style="{transform:!vm.onePageMode?vm.bannerTransform():''}">
+                <div style="position: absolute;" ng-style="{left:!vm.onePageMode?banner.getOffsetX()+'px':''}" ng-repeat="banner in vm.banners track by $index">
+                    <img ng-src="{{banner.src}}" ng-class="{active:vm.isActive($index)}" alt="">
+                </div>
+            </div>
+            <!--<div class="image" ng-show="vm.onePageMode" >
+                <div ng-repeat="banner in vm.banners track by $index">
+                    <img ng-src="{{banner.src}}" ng-class="{active:vm.isActive($index)}" alt="">
+                </div>
+            </div>-->
+
+
+            <div class="button" style="position: absolute;opacity: 0">
+                <div class="big-button">
+                    <div state-id="btn-detail-hidden" key-left="vm.bannerSwipeLeft()" key-right="vm.bannerSwipeRight()" key-up="to#'btn-detail'"
+                        key-down="to#'btn-detail'" key-enter="vm.buyCheckOnePage()">
+                        <button class="wrap">
+                        <a class="main-button"
+                         ng-class="{selected:stateman.isSelected(),anim:true} ">
+                         购买
+                         </a>
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div style="position: absolute;opacity: 1">
+                <div class="button">
+                    <div class="big-button">
+                        <div state-id="btn-detail-hidden" key-left="vm.bannerSwipeLeft()" key-right="vm.bannerSwipeRight()" key-up="to#btn-detail"
+                            key-down="to#btn-detail">
+                            <button class="wrap">
+                                aaaaaa
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <div class="buy">
+                <div class="message">
+                    <p>{{vm.detail1}}</p>
+                    <p>{{vm.detail2}}</p>
+                </div>
+                <div class="price">￥{{vm.price}}</div>
+                <div class="button">
+                    <div class="big-button">
+                        <div state-id="btn-detail" key-up="to#'btn-detail-hidden'" key-left="to#'btn-detail'" key-down="to#'btn-detail-hidden'" key-enter="vm.buy()">
+                            <button class="wrap">
+                        <a class="main-button"
+                         ng-class="{selected:stateman.isSelected(),anim:true} ">
+                         购买
+                         </a>
+                    </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nuts-page>

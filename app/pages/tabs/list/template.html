@@ -1,0 +1,46 @@
+<div class="page-list">
+    <div class="list-content">
+        <div class="arrow-left">
+            <i ng-show="vm.hasPrev()" class="icon-arrow-left"></i>
+        </div>
+        <div class="list">
+            <div state-id="list-item-1" key-left="stateman.cache('list-item','list-item-1');vm.prevPage()" key-right="stateman.to('list-item-2')"
+                key-up="stateman.to(stateman.cache('tabs'),'tabsDown','list-item-1');stateman.cache('list-item','list-item-1')"
+                key-down="stateman.to('list-item-3')" key-enter="stateman.cache('list-item','list-item-1');vm.go(vm.data[0])" ng-class="{selected:stateman.isSelected(),anim:true}"
+                class="item">
+                <button class="wrap">
+                    <list-item column-id="vm.sp.id" item="vm.data[0]"></list-item>
+                </button>
+            </div>
+            <div state-id="list-item-2" key-left="stateman.to('list-item-1')" key-right="stateman.cache('list-item','list-item-2');vm.nextPage()"
+                key-up="stateman.to(stateman.cache('tabs'),'tabsDown','list-item-2');stateman.cache('list-item','list-item-2')"
+                key-down="stateman.to('list-item-4')" key-enter="stateman.cache('list-item','list-item-2');vm.go(vm.data[1])" ng-class="{selected:stateman.isSelected(),anim:true}"
+                class="item ">
+                <button class="wrap">
+                    <list-item column-id="vm.sp.id" item="vm.data[1]"></list-item>
+                </button>
+            </div>
+            <div state-id="list-item-3" key-left="stateman.cache('list-item','list-item-3');vm.prevPage()" key-right="stateman.to('list-item-4')"
+                key-up="stateman.to('list-item-1')" key-down="vm.$state.go('records',{page:1});stateman.cache('list-item','list-item-3')"
+                key-enter="stateman.cache('list-item','list-item-3');vm.go(vm.data[2])" ng-class="{selected:stateman.isSelected(),anim:true}" class="item">
+                <button class="wrap">
+                    <list-item column-id="vm.sp.id" item="vm.data[2]"></list-item>
+                </button>
+            </div>
+            <div state-id="list-item-4" key-left="stateman.to('list-item-3')" key-right="stateman.cache('list-item','list-item-4');vm.nextPage()"
+                key-up="stateman.to('list-item-2')" key-down="vm.$state.go('records',{page:1});stateman.cache('list-item','list-item-4')"
+                key-enter="stateman.cache('list-item','list-item-4');vm.go(vm.data[3])" ng-class="{selected:stateman.isSelected(),anim:true}" class="item">
+                <button class="wrap">
+                    <list-item column-id="vm.sp.id" item="vm.data[3]"></list-item>
+                </button>
+            </div>
+        </div>
+        <div class="arrow-right">
+            <i ng-show="vm.hasNext()" class="icon-arrow-right"></i>
+        </div>
+    </div>
+    <div class="arrow-down">
+        <p>已购买的服务</p>
+        <p><i class="icon-arrow-down"></i></p>
+    </div>
+</div>

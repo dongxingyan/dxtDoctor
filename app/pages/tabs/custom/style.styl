@@ -1,0 +1,22 @@
+tw(value)
+  value / 19.2vw
+
+th(value)
+  value / 10.8vh
+
+.page-custom {
+  display flex
+  flex-direction column
+  justify-content flex-start
+  align-items: center
+  height th(820)
+  iframe{
+    width: tw(1800)
+    height: th(820)
+  }
+  img{
+    width: tw(1770)
+    border-radius:tw(8)
+    // box-shadow:  0 0 tw(4) gray
+  }
+}

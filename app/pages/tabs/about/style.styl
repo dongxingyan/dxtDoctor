@@ -1,0 +1,80 @@
+tw(value)
+  value / 19.2vw
+
+th(value)
+  value / 10.8vh
+
+.page-about {
+  display flex
+  flex-direction row
+  justify-content start
+  height th(820)
+  aside {
+    display flex
+    flex-direction column
+    justify-content start
+    width tw(500)
+    .about-logo {
+      display flex
+      justify-content center
+      padding tw(2);
+      margin-top: tw(35)
+      .logo-wrap {
+        display flex
+        justify-content center
+        align-items center
+        box-shadow 0 0 2px white
+        width th(340)
+        height th(340)
+        border-radius tw(30)
+        background-color #ffffff25
+        .logo-img {
+          width th(180)
+          height th(180)
+          background-size th(180) th(180)
+          background-repeat no-repeat
+          img {
+            border-radius th(25)
+            width th(180)
+            height th(180)
+          }
+        }
+      }
+    }
+    .about-title {
+      display flex
+      justify-content center
+      font-size th(40)
+      padding-top th(60)
+      color #23c1e3
+      font-weight 500
+    }
+    .about-btn {
+      display flex
+      flex-direction column
+      justify-content flex-end
+      flex 1
+    }
+  }
+  article {
+    flex 1
+    font-size tw(36)
+    color: #fff
+    padding 0 tw(100);
+    h3{
+      font-size: tw(50)
+      line-height: tw(120)
+    }
+    p{
+      font-size: tw(40)
+      &.notitle{
+        &.small{
+          padding-top:tw(15)
+          font-size: tw(45)
+          text-indent: 2em
+          line-height: tw(80)
+        }
+      }
+    }
+  }
+}

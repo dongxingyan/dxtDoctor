@@ -1,0 +1,109 @@
+tw(value)
+  value / 19.2vw
+
+th(value)
+  value / 10.8vh
+
+.page-list {
+  .list-content {    
+    width tw(1756)
+    padding-top th(100)
+    display flex
+    flex-direction row
+    justify-content center
+    items-align center
+    overflow: auto
+    .list {
+      width tw(1570)
+      height th(570)
+      padding-bottom th(100)
+      display flex
+      flex-direction row
+      flex-wrap: wrap
+      justify-content space-between
+      align-content space-between
+      .item {
+        width: tw(750)
+        height: th(250)
+        border th(5) solid transparent
+        border-radius tw(15)
+        background-color #ffffff55
+        &.selected{
+            transform scale(1.1)
+            transform-origin:50% 50%;
+            border th(5) solid white
+        }
+      }
+      
+    }
+  }
+  .arrow-right{
+      width:tw(93);
+      i{
+          font-size:tw(93);
+          line-height th(567)
+          color #ffffff55
+      }
+  }
+  .arrow-left{
+      width:tw(93);
+      i{
+          font-size:tw(93);
+          line-height th(567)
+          color #ffffff55
+      }
+  }
+  .arrow-down{
+      p{
+          font-size tw(32)
+          width tw(1756)
+          text-align center
+          color #ffffff55
+          padding-right tw(85)
+      }
+  }
+  div.list-item{
+    display flex
+    flex-direction: column
+    height th(160)
+    padding  th(40) tw(60)
+    color: #fff
+    overflow: hidden
+    .item-top{
+      text-align: left
+      font-size: tw(42)
+      padding-bottom: th(18)
+    }
+    .item-bottom{
+      display: flex
+      .desc {
+        text-align: left;
+        flex: 1;
+        font-size: tw(32);
+        width: tw(470)
+      }
+      .price {
+        text-align: left;
+        width: tw(200)
+        font-size: tw(48)
+      }
+    }
+
+    .item-left{
+      width:tw(430)
+      text-align left
+      p:nth-child(1) {
+        font-size: tw(42)
+      }
+      p:nth-child(2) {
+        font-size: tw(32)
+      }
+    }
+    .item-right{
+      display flex
+      align-items center
+      width:tw(200)
+      font-size:tw(48)
+    }
+  }
+}

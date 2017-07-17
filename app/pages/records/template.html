@@ -1,0 +1,42 @@
+<nuts-page>
+    <div class="page-records">
+        <header>购买记录</header>
+        <div state-id="records-list" key-up="vm.up()" key-down="vm.down()">
+            <button class="wrap">
+                <table>
+                    <thead>
+                    <tr>
+                        <td colspan="5"><i ng-show="vm.hasPrev()" class="icon-arrow-up"></i>　</td>
+                    </tr>
+                    <tr>
+                        <th>时间</th>
+                        <th>服务</th>
+                        <th>产品</th>
+                        <th>订单编号</th>
+                        <th>金额</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <td colspan="5"><i ng-show="vm.hasNext()" class="icon-arrow-down"></i>　</td>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    <tr ng-repeat="item in vm.getRecords() track by $index"
+                        ng-class="{active:$index === vm.mark}">
+                        <td ng-bind="item.updateTime|date:'yyyy-MM-dd'"></td>
+                        <td ng-bind="item.appName">服务</td>
+                        <td>
+                            {{item.productName}}
+                            <br>
+                            <span ng-show="item.verificationCode">验证码:{{item.verificationCode}}</span>
+                        </td>
+                        <td ng-bind="item.tradeNo">订单编号</td>
+                        <td ng-bind="item.totalFee/100|number:2|currency:'￥'">金额</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </button>
+        </div>
+    </div>
+</nuts-page>

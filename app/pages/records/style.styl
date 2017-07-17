@@ -1,0 +1,73 @@
+tw(value)
+  value / 19.2vw
+
+th(value)
+  value / 10.8vh
+
+.page-records {
+  width tw(1920)
+  height th(1080)
+  display flex
+  justify-content center
+  align-items flex-start
+  header {
+    position: absolute
+    left tw(70)
+    top th(90)
+    font-size tw(36)
+    color #8d98ab
+  }
+  table {
+    color: #fff
+    text-align center
+    width: tw(1600)
+    td, th {
+      text-align center
+      white-space: nowrap
+      text-overflow: ellipsis
+      padding: 0 tw(10) 
+    }
+    tr {
+      border-bottom 1px solid white
+    }
+    thead > tr:nth-child(1) {
+      border 0;
+    }
+    thead {
+      font-size tw(42)
+      tr:nth-child(1) {
+        font-size tw(93)
+        color #8d98abaa
+      }
+
+      tr:nth-child(2) {
+        line-height:th(120)
+      }
+    }
+    tfoot {
+      font-size tw(93)
+      color #8d98abaa
+      tr{
+        border 0;
+      }
+    }
+    tbody {
+      font-size tw(36)
+      tr{
+        height: th(160);
+        line-height:th(80);
+        &:hover,&:active,&:focus,&.active{
+          background-color rgba(255,255,255,.1)
+          border:1px solid white;
+          box-shadow: 0 0 th(35) #4bd7ff
+        }
+        td{
+          border: 0
+        }
+      }
+      tr:last-child{
+        border 0 ;
+      }
+    }
+  }
+}

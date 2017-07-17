@@ -1,0 +1,26 @@
+<div class="page-home">
+    <popup-dial ctrl="vm.popupCtrl"></popup-dial>
+    <div class="carousel">
+        <img ng-src="{{vm.imgUrl}}" alt="banner">
+    </div>
+    <div class="text">
+        <section>
+            <header>业务范围</header>
+            <div ng-bind-html="vm.businessDesc"></div>
+        </section>
+
+        <div class="button" style="flex-direction: column">
+            <section>
+                <header>服务时间</header>
+                <ul>
+                    <li ng-repeat="desc in vm.servTimeDesc" ng-bind="desc"></li>
+                </ul>
+            </section>
+            <div state-id="btn-index" key-enter="vm.call()" key-left="to#btn-index" key-right="to#btn-index" key-up="stateman.to(stateman.cache('tabs'))" key-down="to#btn-index">
+                <button class="wrap">
+                        <a class="main-button" ng-class="{selected:stateman.isSelected(),anim:true}">{{vm.btnTitle}}</a>
+                    </button>
+            </div>
+        </div>
+    </div>
+</div>

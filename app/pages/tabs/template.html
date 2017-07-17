@@ -1,0 +1,29 @@
+<nuts-page>
+    <div class="navbar">
+        <ul>
+            <li>{{vm.session.appName}}</li>
+            <li>
+                <ul>
+                    <li
+                            ng-repeat="tab in vm.session.tabs"
+                            ui-sref='{{vm.getTabSref(tab)}}'
+                            state-id='tabs-{{$index}}'
+                            key-left="stateman.to('tabs-{{$index-1}}','tabs','tabs-{{$index-1}}');vm.goto({{$index-1}})"
+                            key-right="stateman.to('tabs-{{$index+1}}','tabs','tabs-{{$index+1}}');vm.goto({{$index+1}})"
+                            key-up=""
+                            key-down="to#stateman.cache('tabsDown'),'tabs',stateman.stateMan.actived"
+                            ng-class="{selected:stateman.isSelected(),anim:true,active:vm.isActive(tab)}">
+                        <button class="wrap">{{tab.columnName}}</button>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <img class="clock" src="../../res/imgs/clock.png" alt="">
+                <span>{{vm.getTime()}}</span>
+            </li>
+        </ul>
+    </div>
+    <div ui-view class="content">
+
+    </div>
+</nuts-page>
